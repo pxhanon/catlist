@@ -8,7 +8,7 @@ export default function Topbar() {
       <div className="top">
       <div className="topLeft">
           <Adb className="icon" />
-          <Link className="link" to="/">
+          <Link className="link" to="/intro">
             <span className="brand">catlist</span>
           </Link>
       </div>

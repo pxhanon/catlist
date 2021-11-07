@@ -3,8 +3,8 @@ import {Home, WbSunny, DateRange, PersonSearch, FindInPage, ContactSupport} from
 
 export const SidebarData = [
     {
-      title: 'Main',
-      path: '/main',
+      title: 'Home',
+      path: "/",
       icon: <Home />,
       cName: 'nav-text'
     },

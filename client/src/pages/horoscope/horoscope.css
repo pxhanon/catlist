@@ -1,16 +1,13 @@
 .horoscope {
-    position: absolute;
-    align-items: center;
-    justify-content: center;
+    width: 100vw;
+    height: 100vh;
     background-color: #E8E8E8;
-    width: calc(100vw - 250px);
-    height: calc(100vh - 80px);
-    z-index: -1;
-    margin-left: 250px;
 }
 
-.topicHoroscope {
-    margin-left: 44%;
+.horoscopeTopic {
     font-size: 30px;
     font-weight: 500;
+    margin-top: 80px;
+    margin-left: 785px;
+    margin-bottom: 30px;
 }

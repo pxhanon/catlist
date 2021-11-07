@@ -1,9 +1,9 @@
 import Topbar from "./components/topbar/Topbar";
-import Home from "./pages/home/Home";
+import Intro from "./pages/intro/Intro";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import Main from "./pages/main/Main";
+import Home from "./pages/home/Home";
 import Sidebar from "./components/sidebar/Sidebar";
 
 import {
@@ -28,23 +28,23 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {user ? <Main /> :
+          {user ? <><Sidebar /><Home /></> :
             <>
               <Topbar />
-              <Home />
+              <Intro />
             </>
           }
         </Route>
-        <Route path="/main">
-          {user ? <Main /> :
+        <Route path="/intro">
+          {user ? <><Sidebar /><Home /></> :
             <>
               <Topbar />
-              <Home />
+              <Intro />
             </>
           }
         </Route>
         <Route path="/register">
-          {user ? <Main /> : 
+          {user ? <><Sidebar /><Home /></> : 
             <>
               <Topbar />
               <Register />
@@ -52,13 +52,14 @@ function App() {
           }
         </Route>
         <Route path="/login">
-          {user ? <Main /> :
+          {user ? <><Sidebar /><Home /></> :
             <>
               <Topbar />
               <Login />
             </>
           }
         </Route>
+        
         <Route path="/settings">
           {user ? <><Sidebar /><Settings /></> : 
             <>

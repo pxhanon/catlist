@@ -1,18 +1,11 @@
 import "./home.css";
 
-import Header from "../../components/header/Header";
-import Feature from "../../components/feature/Feature";
-import Howto from "../../components/howto/Howto";
-import Contact from "../../components/contact/Contact";
-
+import QuickNote from "../../components/quicknote/QuickNote";
 
 export default function Home() {
     return (
         <div className="home">
-            <Header />
-            <Feature />
-            <Howto />
-            <Contact />
+            <QuickNote />
         </div>
     )
 }

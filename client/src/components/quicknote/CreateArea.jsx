@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import { Fab, Zoom } from "@mui/material";
+
+import { Context } from "../../context/Context";
+import axios from "axios";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
 
   const [note, setNote] = useState({
     title: "",
-    content: ""
+    desc: "",
+    username: ""
   });
 
-  function handleChange(event) {
+  const { user } =  useContext(Context);
+
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setNote(prevNote => {
@@ -21,16 +27,24 @@ function CreateArea(props) {
     });
   }
 
-  function submitNote(event) {
-    props.onAdd(note);
+  const submitNote = async (event) => {
+    event.preventDefault();
+    const newNote = {
+      title: note.title,
+      desc: note.desc,
+      username: user.username
+    }
+    await axios.post("/notes", newNote)
+      .then(res => {
+        console.log(res.data);
+      });
     setNote({
       title: "",
-      content: ""
+      desc: ""
     });
-    event.preventDefault();
   }
 
-  function expand() {
+  const expand = () => {
     setExpanded(true);
   }
 
@@ -47,10 +61,10 @@ function CreateArea(props) {
         )}
 
         <textarea
-          name="content"
+          name="desc"
           onClick={expand}
           onChange={handleChange}
-          value={note.content}
+          value={note.desc}
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />

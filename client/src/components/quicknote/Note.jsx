@@ -1,13 +1,23 @@
-import React from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
+import React, { useContext, useState } from "react";
+
+import axios from "axios";
+import { Context } from "../../context/Context";
 
 function Note(props) {
-  function handleClick() {
-    props.onDelete(props.id);
+
+  const { user } =  useContext(Context);
+
+  const handleClick = async () => {
+    await axios.delete("/notes/"+props.id)
+      .then(res => {
+        console.log(res.data);
+    });
   }
 
   return (
     <div className="note">
+
       <h1>{props.title}</h1>
       <p>{props.content}</p>
       <button onClick={handleClick}>
