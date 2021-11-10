@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #E8E8E8;
+    overflow: hidden;
 }
 
 .weatherTopic {
@@ -13,27 +14,13 @@
 }
 
 .formWeather {
-    margin-left: 720px;
+    margin-left: 680px;
 }
 
-.weatherTemp {
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 80px;
-    margin-left: 740px;
-    margin-bottom: 30px;
+.inputFormWeather {
+    margin-left: 250px;
 }
 
-.weatherDesc {
-    font-size: 30px;
-    font-weight: 500;
-    margin-left: 700px;
-    margin-bottom: 30px;
-}
-
-.weatherIcon {
-    font-size: 30px;
-    font-weight: 500;
-    margin-left: 800px;
-    margin-bottom: 30px;
+.divWeather {
+    margin-left: 685px;
 }

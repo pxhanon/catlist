@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const noteRoute = require("./routes/notes");
+const eventRoute = require("./routes/events");
 
 //const multer = require("multer");
 
@@ -34,6 +35,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/notes", noteRoute);
+app.use("/api/events", eventRoute);
 
 
 app.listen("5000", () => {

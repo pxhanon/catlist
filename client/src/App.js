@@ -18,7 +18,7 @@ import Weather from "./pages/weather/Weather";
 import Calendar from "./pages/calendar/Calendar";
 import Horoscope from "./pages/horoscope/Horoscope";
 import Manual from "./pages/manual/Manual";
-import ContactUs from "./pages/contactUs/ContactUs";
+//import ContactUs from "./pages/contactUs/ContactUs";
 
 function App() {
 
@@ -100,14 +100,14 @@ function App() {
             </>
           }
         </Route>
-        <Route path="/contact-us">
+        {/* <Route path="/contact-us">
           {user ? <><Sidebar /><ContactUs /></> : 
             <>
               <Topbar />
               <Register />
             </>
           }
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );

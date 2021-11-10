@@ -9,6 +9,7 @@ function Note(props) {
   const { user } =  useContext(Context);
 
   const handleClick = async () => {
+    console.log(props.id);
     await axios.delete("/notes/"+props.id)
       .then(res => {
         console.log(res.data);

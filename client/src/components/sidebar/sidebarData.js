@@ -32,10 +32,4 @@ export const SidebarData = [
       icon: <FindInPage/>,
       cName: 'nav-text'
     },
-    {
-      title: 'Contact Us',
-      path: '/contact-us',
-      icon: <ContactSupport />,
-      cName: 'nav-text'
-    }
   ];
