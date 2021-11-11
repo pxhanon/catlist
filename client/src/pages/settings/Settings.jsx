@@ -1,46 +1,88 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./settings.css";
-
 import { Context } from "../../context/Context";
+import axios from "axios";
 
 export default function Settings() {
 
-    const { user } = useContext(Context);
+    const [file, setFile] = useState(null);
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [success, setSuccess] = useState(false);
+
+    const { user, dispatch } = useContext(Context);
+    const PF = "http://localhost:5000/images/";
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        dispatch({ type: "UPDATE_START" });
+        const updatedUser = {
+          userId: user._id,
+          username,
+          email,
+          password,
+        };
+        if (file) {
+          const data = new FormData();
+          const filename = Date.now() + file.name;
+          data.append("name", filename);
+          data.append("file", file);
+          updatedUser.profilePic = filename;
+          try {
+            await axios.post("/upload", data);
+          } catch (err) {}
+        }
+        try {
+          const res = await axios.put("/users/" + user._id, updatedUser);
+          setSuccess(true);
+          dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
+        } catch (err) {
+          dispatch({ type: "UPDATE_FAILURE" });
+        }
+    };
 
     return (
         <>
         <div className="settings">
             <div className="settingsWrapper">
-                <div className="settingsTitle">
-                    <span className="settingsTitleUpdate">Account Settings</span>
-                    <span className="settingsTitleDelete">Delete Account</span>
-                </div>
-                    <form className="settingsForm">
-                        <label>Profile Picture</label>
-                        <div className="settingsPP">
-                            <img
-                                src={user.profilePic}
-                                alt=""
-                            />
-                            <label htmlFor="fileInput">
-                                <i className="settingsPPIcon far fa-user-circle"></i>{" "}
-                            </label>
-                            <input
-                                id="fileInput"
-                                type="file"
-                                style={{ display: "none" }}
-                                className="settingsPPInput"
-                            />
+                    <form onSubmit={handleSubmit} class="max-w-lg bg-gray-100 px-5 py-8 rounded shadow-md mt-20 my-1 m-auto">
+                        <h2 class="text-center text-2xl font-medium text-black mb-10">
+                            Account Setting
+                        </h2>
+                        <div className="">
+                            <div className="settingsPP">
+                                <img
+                                    src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+                                    alt=""
+                                    class="ml-48 mr-1"
+                                />
+                                <label htmlFor="fileInput">
+                                    <i className="settingsPPIcon far fa-user-circle"></i>{" "}
+                                </label>
+                                <input
+                                    id="fileInput"
+                                    type="file"
+                                    style={{ display: "none" }}
+                                    className="settingsPPInput"
+                                    onChange={(e) => setFile(e.target.files[0])}
+                                />
+                            </div>
                         </div>
-                        <label>Username</label>
-                        <input className="inputSettings" type="text" placeholder="Pxhanon" name="name" />
-                        <label>Email</label>
-                        <input className="inputSettings" type="email" placeholder="pxhanon@gmail.com" name="email" />
-                        <label>Password</label>
-                        <input className="inputSettings" type="password" placeholder="Password" name="password" />
-                        <button className="settingsSubmitButton" type="submit">
+                        <label class="block text-lg text-gray-800 font-medium">Username</label>
+                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="text" placeholder={user.username} onChange={(e) => setUsername(e.target.value)} name="name" />
+                        <label class="block text-lg text-gray-800 font-medium">Email</label>
+                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="email" placeholder={user.email} onChange={(e) => setEmail(e.target.value)} name="email" />
+                        <label class="block text-lg text-gray-800 font-medium">Password</label>
+                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="password" onChange={(e) => setPassword(e.target.value)} name="password" />
+                        <button class="cursor-pointer mb-5 py-2 px-4 block mt-6 bg-yellow-main text-black font-medium w-full text-center rounded" type="submit">
                             Update
                         </button>
+                        {success && (
+                            <span class="text-center ml-40 text-sm font-medium text-green-500">
+                            Profile has been updated...
+                            </span>
+                        )}
                     </form>
             </div>
         </div>

@@ -8,15 +8,18 @@ export default function Weather() {
 
     const locationRef = useRef();
     const [weather, setWeather] = useState({});
+    const [error, setError] = useState(false);
 
     const locationSubmit = async (e) => {
         e.preventDefault();
+        setError(false);
         try {
           const res = await axios.post("/users/weather",{cityName:locationRef.current.value});
           console.log(res.data);
           setWeather(res.data);
         } catch (err) {
             console.log(err);
+            setError(true);
         }
     };
 
@@ -26,12 +29,16 @@ export default function Weather() {
         <div className="weather">
             <div className="inputFormWeather">
                 <form class="max-w-sm bg-gray-100 px-5 py-8 rounded shadow-md mt-20 my-10 m-auto" onSubmit={locationSubmit}>
-                    <h2 class="text-center text-2xl font-medium text-black mb-5">
+                    <h2 class="text-center -mt-3 text-2xl font-medium text-black mb-5">
                         Current Weather
                     </h2>
                     <label className="font-normal text-lg" for="cityInput">City Name: </label>
                     <input placeholder="Type your City Name" className="ml-4 appearance-none border-none rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cityInput" type="text" name="cityName" ref={locationRef}/>
                     <button class="ml-4 bg-yellow-main text-black py-2 px-3 rounded focus:outline-none focus:shadow-outline" type="submit">Go</button>
+                    {error ? 
+                        <p class="text-center ml-5 text-sm font-medium text-red-500 mt-4">
+                            Please check your City Name again !
+                        </p> : null}
                 </form>
             </div>
             <span>

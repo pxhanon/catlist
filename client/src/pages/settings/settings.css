@@ -65,8 +65,8 @@
     border: none;
     border-radius: 50%;
     margin-left: 10px;
-    color: white;
-    background-color: lightcoral;
+    color: black;
+    background-color: #FFDA77;
     cursor: pointer;
 }
 

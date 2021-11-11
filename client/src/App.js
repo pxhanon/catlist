@@ -1,4 +1,5 @@
 import Topbar from "./components/topbar/Topbar";
+import TopbarForLogin from "./components/topbarForLogin/TopbarForLogin"
 import Intro from "./pages/intro/Intro";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
@@ -46,7 +47,7 @@ function App() {
         <Route path="/register">
           {user ? <><Sidebar /><Home /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }
@@ -54,7 +55,7 @@ function App() {
         <Route path="/login">
           {user ? <><Sidebar /><Home /></> :
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Login />
             </>
           }
@@ -63,7 +64,7 @@ function App() {
         <Route path="/settings">
           {user ? <><Sidebar /><Settings /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }
@@ -71,7 +72,7 @@ function App() {
         <Route path="/weather">
           {user ? <><Sidebar /><Weather /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }
@@ -79,7 +80,7 @@ function App() {
         <Route path="/calendar">
           {user ? <><Sidebar /><Calendar /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }
@@ -87,7 +88,7 @@ function App() {
         <Route path="/horoscope">
           {user ? <><Sidebar /><Horoscope /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }
@@ -95,7 +96,7 @@ function App() {
         <Route path="/manual">
           {user ? <><Sidebar /><Manual /></> : 
             <>
-              <Topbar />
+              <TopbarForLogin />
               <Register />
             </>
           }

@@ -12,6 +12,7 @@ import { Context } from "../../context/Context";
 export default function Sidebar() {
 
     const { user, dispatch } = useContext(Context);
+    const PF = "http://localhost:5000/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
@@ -21,14 +22,14 @@ export default function Sidebar() {
         <div className="backgroundAllPage">
             <div className='navbar'>
             <Link to="/settings" >
-                <img src={user.profilePic} className="profilePicture" alt="" />
+                <img src={PF+user.profilePic} className="profilePicture" alt="" />
             </Link>
                 <h2 className="logoutSidebar" onClick={handleLogout}>{ user && "Logout"}</h2>
             </div>
             <nav className='nav-menu'>
                 <ul className='nav-menu-items'>
                     <li className='navbar-toggle'>
-                        <Adb className="iconMain" />
+                        <img class="w-7 ml-5 mr-2" src="assets/icon/cat.png" alt="" />
                         <span className="brandMain">catlist</span>
                     </li>
                     {SidebarData.map((item, index) => {

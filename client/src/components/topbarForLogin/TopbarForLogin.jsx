@@ -1,9 +1,9 @@
-import "./topbar.css";
+import "./topbarForLogin.css";
 import { Adb } from '@mui/icons-material';
 
 import { Link } from "react-router-dom";
 
-export default function Topbar() {
+export default function TopbarForLogin() {
   return (
       <div className="top">
       <div className="topLeft">
@@ -14,9 +14,6 @@ export default function Topbar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <a href="#header" className="topListItem">home</a>
-          <a href="#feature" className="topListItem">feature</a>
-          <a href="#howto" className="topListItem">manual</a>
         </ul>
         </div>
       <div className="topRight">

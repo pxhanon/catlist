@@ -66,19 +66,24 @@ router.post("/weather", function(req, res){
     https.get(url, function(response) {
      console.log(response.statusCode);
      response.on("data", function(data) {
-      
-       const weatherData = JSON.parse(data);
-       const temp = weatherData.main.temp;
-       const description = weatherData.weather[0].description;
-       const icon = weatherData.weather[0].icon;
-       const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-       const weatherInfo = {
-         Temp: temp,
-         Description: description,
-         Icon: icon,
-         ImageURL : imageURL
-       }
-       res.status(200).json(weatherInfo);
+      try {
+        const weatherData = JSON.parse(data);
+        const temp = weatherData.main.temp;
+        const description = weatherData.weather[0].description;
+        const icon = weatherData.weather[0].icon;
+        const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+        const weatherInfo = {
+          Temp: temp,
+          Description: description,
+          Icon: icon,
+          ImageURL : imageURL
+        }
+        res.status(200).json(weatherInfo);
+      } catch (err) {
+        res.status(500).json(err);
+        
+      }
+       
       //  res.write("<p>The weather is currently " + description + "</p>");
       //  res.write("<h1>The temperature in " + query + " is " + temp + " degrees Celcius.</h1>");
       //  res.write("<img src=" + imageURL + ">");

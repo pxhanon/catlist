@@ -1,0 +1,75 @@
+.top {
+    width: 100vw;
+    height: 70px;
+    background-color: #E8E8E8;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.topLeft,
+.topRight {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topCenter {
+    flex: 6;
+}
+
+.icon {
+    color: #383838;
+    margin-right: 10px;
+}
+
+.brand {
+    color: #383838;
+    font-size: 40px;
+    font-weight: 400;
+    margin-right: 40px; 
+}
+
+.topList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topListItem {
+    color: #383838;
+    margin-right: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.topListItemLogout {
+    color: #CB3737;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.topListItem:hover {
+    color: gray;
+}
+
+.topListItemLogout:hover {
+    color: #A23131;
+}
+
+.topImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+    cursor: pointer;
+}
