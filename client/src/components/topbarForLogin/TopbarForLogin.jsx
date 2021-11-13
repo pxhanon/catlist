@@ -1,5 +1,4 @@
 import "./topbarForLogin.css";
-import { Adb } from '@mui/icons-material';
 
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,9 @@ export default function TopbarForLogin() {
   return (
       <div className="top">
       <div className="topLeft">
-          <img class="w-6 mr-3" src="assets/icon/cat.png" alt="" />
+          <Link className="link" to="/intro">
+            <img class="w-8 mr-5" src="assets/icon/cat.png" alt="" />
+          </Link>
           <Link className="link" to="/intro">
             <span className="brand">catlist</span>
           </Link>
@@ -22,7 +23,7 @@ export default function TopbarForLogin() {
             <Link className="link" to="/login">Log In</Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/register">Sign Up</Link>
+            <Link className="link bg-yellow-main text-black-main font-medium py-2 px-3 rounded focus:outline-none focus:shadow-outline" to="/register">Sign Up</Link>
           </li>
         </ul>
       </div>

@@ -46,8 +46,8 @@ export default function Settings() {
         <>
         <div className="settings">
             <div className="settingsWrapper">
-                    <form onSubmit={handleSubmit} class="max-w-lg bg-gray-100 px-5 py-8 rounded shadow-md mt-20 my-1 m-auto">
-                        <h2 class="text-center text-2xl font-medium text-black mb-10">
+                    <form onSubmit={handleSubmit} class="max-w-lg bg-black-main px-5 py-8 rounded shadow-md mt-20 my-1 m-auto">
+                        <h2 class="text-center text-2xl font-medium text-yellow-main mb-10">
                             Account Setting
                         </h2>
                         <div className="">
@@ -69,13 +69,13 @@ export default function Settings() {
                                 />
                             </div>
                         </div>
-                        <label class="block text-lg text-gray-800 font-medium">Username</label>
+                        <label class="block text-lg text-gray-main font-medium">Username</label>
                         <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="text" placeholder={user.username} onChange={(e) => setUsername(e.target.value)} name="name" />
-                        <label class="block text-lg text-gray-800 font-medium">Email</label>
+                        <label class="block text-lg text-gray-main font-medium">Email</label>
                         <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="email" placeholder={user.email} onChange={(e) => setEmail(e.target.value)} name="email" />
-                        <label class="block text-lg text-gray-800 font-medium">Password</label>
+                        <label class="block text-lg text-gray-main font-medium">Password</label>
                         <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="password" onChange={(e) => setPassword(e.target.value)} name="password" />
-                        <button class="cursor-pointer mb-5 py-2 px-4 block mt-6 bg-yellow-main text-black font-medium w-full text-center rounded" type="submit">
+                        <button class="cursor-pointer mb-5 py-2 px-4 block mt-6 bg-yellow-main text-black-main hover:bg-yellow-sub font-medium w-full text-center rounded" type="submit">
                             Update
                         </button>
                         {success && (

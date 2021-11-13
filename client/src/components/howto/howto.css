@@ -1,5 +1,6 @@
 .howto {
-    background-color: #E8E8E8;
+    padding-top: 70px;
+    background-color: #383838;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 70px);

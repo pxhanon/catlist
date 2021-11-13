@@ -46,32 +46,21 @@ export default function Contact() {
     weekday[6] = "Saturday";
     const currentDay = weekday[currentDate.getDay()];
 
+
     return (
         <div className="contact" id="contact">
-            <h1 className="h1Contact">CONTACT</h1>
-            <div className="sliderContact"  style={{transform: `translateX(-${currentSlide * 102.8}vw)`}}>
-                {data.map(d => (
-                    <div className="containerContact">
-                        <div className="itemContact">
-                            <div className="leftContact">
-                                <img className="imgContact1" src={d.img} alt="img" />
-                            </div>
-                            <div className="rightContact">
-                                <div className="rightContainerContact">
-                                    <div className="imgContainerContact">
-                                        <img className="imgContact2" src={d.contact} alt=""/>
-                                    </div>
-                                </div>
-                                <form className="formContact">
-                                    <button className="buttonContact" type="submit">CONTACT</button>
-                                </form>
-                            </div>
-                        </div>
+            <div className="w-2/3 h-1/2 mb-20">
+                <div class="w-full bg-yellow-main rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                    <div class="w-full h-80">
+                        <img class="object-center h-full" src="assets/demo14.jpeg" alt="4564" />
                     </div>
-                ))}
+                    <div class="w-full md:w-5/5 text-left p-6 md:p-4 space-y-2">
+                        <p class="text-xl tracking-wider text-black-main font-bold">Hello, Catlister</p>
+                        <p class="text-base tracking-wider text-gray-500 font-medium">from organizer</p>
+                        <p class="text-base tracking-wide leading-relaxed text-black-main font-medium">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </div>
+                </div>
             </div>
-            <p class="arrow left" onClick={() => handleClick("left")}></p>
-            <p class="arrow right" onClick={() => handleClick("right")}></p>
             <Adb className="adb" />
             <h3 className="h3Contact">catlist</h3>
             <Copyright className="copyright" />

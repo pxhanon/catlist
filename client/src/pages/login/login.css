@@ -1,6 +1,6 @@
 .login {
     display: flex;
-    background-color: #E8E8E8;
+    background-color: #383838;
     height: calc(100vh - 70px);
     width: 100vw;
     align-items: center;
@@ -23,13 +23,15 @@
 
 .loginLogo {
     font-size: 50px;
-    font-weight: 800;
-    color: #383838;
+    font-weight: 600;
+    color: #FFDA77;
     margin-bottom: 10px;
+    letter-spacing: 3px;
 }
 
 .loginDesc {
     font-size: 24px;
+    color: #E8E8E8;
 }
 
 .loginRight {
@@ -43,7 +45,7 @@
 .loginBox {
     height: 300px;
     padding: 20px;
-    background-color: white;
+    background-color: #E8E8E8;
     border-radius: 10px;
     display: flex;flex-direction: column;
     justify-content: space-between;
@@ -53,7 +55,7 @@
 .loginInput {
     height: 50px;
     border-radius: 10px;
-    border: 1px solid #9BA4B4;
+    border: 1px solid black;
     font-size: 18px;
     padding-left: 20px;
 }
@@ -61,9 +63,13 @@
 .passwordInput {
     height: 50px;
     border-radius: 10px;
-    border: 1px solid #9BA4B4;
+    border: 1px solid black;
     font-size: 18px;
     padding-left: 20px;
+}
+
+.passwordInput:focus {
+    outline-color: #383838;
 }
 
 .loginInput:focus {

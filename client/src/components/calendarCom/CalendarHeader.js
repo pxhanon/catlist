@@ -30,7 +30,7 @@ export default function CalendarHeader() {
             </h1>
             <button
                 onClick={handleReset}
-                className="border border-gray-200 bg-yellow-main rounded py-2 px-4 mr-5 ml-64"
+                className="border border-gray-200 bg-yellow-main text-black-main hover:bg-black-main hover:text-yellow-main font-medium rounded py-2 px-4 mr-5 ml-64"
             >
                 Today
             </button>
@@ -44,7 +44,7 @@ export default function CalendarHeader() {
                 chevron_right
                 </span>
             </button>
-            <h2 className="ml-4 mr-52 text-xl text-black">
+            <h2 className="ml-4 mr-52 text-xl text-black-main font-semibold">
                 {dayjs(new Date(dayjs().year(), monthIndex)).format(
                 "MMMM YYYY"
                 )}

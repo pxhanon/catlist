@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       colors: {
         "gray-main": "#E8E8E8",
-        "yellow-main": "#FFDA77"
+        "yellow-main": "#FFDA77",
+        "yellow-sub": "#ffe294",
+        "black-main": "#383838"
       },
       fontFamily: {
         sans: ["Rajdhani"]

@@ -162,8 +162,8 @@ export default function Horoscope() {
         <div className="horoscope">
             <section class="">
                 <div className="formHoro">
-                    <form onSubmit={handleSubmit} class="max-w-sm bg-gray-100 px-3 py-5 rounded shadow-md my-10 m-auto">
-                        <h2 class="text-center text-2xl font-medium text-black mb-2">
+                    <form onSubmit={handleSubmit} class="max-w-sm bg-black-main px-3 py-5 rounded shadow-md my-10 m-auto">
+                        <h2 class="text-center text-2xl font-medium text-yellow-main mb-2">
                         Monthly Horoscope
                         </h2>
                         <div class="flex flex-col space-y-3">
@@ -176,7 +176,7 @@ export default function Horoscope() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <button type="submit" class="text-black bg-yellow-main px-4 py-2 rounded">
+                        <button type="submit" class="text-black font-medium bg-yellow-main px-4 py-2 rounded hover:bg-yellow-sub hover:text-black-main">
                             Go
                         </button>
                         </div>
@@ -184,14 +184,14 @@ export default function Horoscope() {
                 </div>
                 <div className="divHoro">
                     <div class="">
-                        <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+                        <div class="w-full bg-black-main rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
                             <div class="w-full h-80">
                                 <img class="object-center h-full" src={horoscope.img} alt="photo" />
                             </div>
                             <div class="w-full md:w-5/5 text-left p-6 md:p-4 space-y-2">
-                                <p class="text-xl text-gray-700 font-bold">{horoscope.title}</p>
-                                <p class="text-base text-gray-400 font-normal">{horoscope.range}</p>
-                                <p class="text-base leading-relaxed text-gray-500 font-normal">{horoscope === Default ? horoscope.desc : horoscope.nov}</p>
+                                <p class="text-xl text-gray-main font-bold">{horoscope.title}</p>
+                                <p class="text-base text-yellow-main font-normal">{horoscope.range}</p>
+                                <p class="text-base leading-relaxed text-gray-main font-extralight">{horoscope === Default ? horoscope.desc : horoscope.nov}</p>
                             </div>
                         </div>
                     </div>

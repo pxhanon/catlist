@@ -37,12 +37,12 @@ export default function Login() {
                 </div>  
                 <div className="loginRight" >
                     <form className="loginBox" onSubmit={handleSubmit}>
-                        <input placeholder="Username" required className="loginInput" ref={userRef} />
-                        <input placeholder="Password" type="password" required minLength="6" className="passwordInput" ref={passwordRef} />
+                        <input placeholder="Username" required className="loginInput rounded " ref={userRef} />
+                        <input placeholder="Password" type="password" required minLength="6" className="passwordInput rounded" ref={passwordRef} />
                         <button className="loginButton" type="submit" disabled={isFetching}>
                             Log In
                         </button>
-                        <span className="loginForgot">Forgot Password ?</span>
+                        {/* <span className="loginForgot">Forgot Password ?</span> */}
                         <button className="loginRegisterButton" type="submit">
                                 <Link className="link" to="/register">Create a New Account</Link>
                         </button>

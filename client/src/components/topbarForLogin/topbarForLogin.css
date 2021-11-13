@@ -1,7 +1,7 @@
 .top {
     width: 100vw;
     height: 70px;
-    background-color: #E8E8E8;
+    background-color: #383838;
     position: sticky;
     top: 0;
     display: flex;
@@ -21,16 +21,16 @@
     flex: 6;
 }
 
-.icon {
-    color: #383838;
-    margin-right: 10px;
-}
-
 .brand {
-    color: #383838;
+    color: #E8E8E8;
     font-size: 40px;
     font-weight: 400;
     margin-right: 40px; 
+}
+
+.brand:hover {
+    color: #FFDA77;
+    transform: scale(0.9);
 }
 
 .topList {
@@ -42,7 +42,7 @@
 }
 
 .topListItem {
-    color: #383838;
+    color: #FFDA77;
     margin-right: 60px;
     font-size: 20px;
     font-weight: 500;
@@ -50,19 +50,8 @@
     text-decoration: none;
 }
 
-.topListItemLogout {
-    color: #CB3737;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
 .topListItem:hover {
-    color: gray;
-}
-
-.topListItemLogout:hover {
-    color: #A23131;
+    transform: scale(0.9);
 }
 
 .topImg {

@@ -48,6 +48,10 @@ export default function QuickNote() {
     return (
         <div className="quickNote">
             <h2 className="quickNoteTopic">Quick Note</h2>
+            <div className="editQuickNote">
+                <p class="ml-96 font-medium text-gray-400">Record any thoughts, note or todo list</p>
+                <p class="ml-72 font-medium mb-5 text-gray-400">and share it in seconds. Everything you type autosaves automatically.</p>
+            </div>
             <CreateArea onAdd={addNote} />
             {notes.map((noteItem, index) => {
                 return (

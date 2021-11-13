@@ -1,26 +1,32 @@
 .navbar {
-    background-color: #E8E8E8;
+    background-color: #FFDA77;
     width: 100%;
     position: fixed;
-    left: 250px;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
     top: 0;
     z-index: 999;
+    box-shadow: 2px 1px 3px #ccc;
+
 }
 
 .profilePicture {
     top: 0;
-    margin-top: 25px;
-    width: 38px;
-    height: 38px;
+    margin-top: 18px;
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
     position: absolute;
-    margin-left: 1010px;
+    margin-left: 1100px;
+    padding: 3px;
+}
+
+.profilePicture:hover {
+    background-color: #383838;
 }
 
 .logoutSidebar {
@@ -44,14 +50,14 @@
 }
 
 .nav-menu {
-    background-color: #fff;
+    background-color: #383838;
     width: 250px;
-    height: 100vh;
+    top: 80px;
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
-    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px #ccc;
 }
 
 .nav-text {
@@ -65,7 +71,7 @@
 
 .nav-text a {
     text-decoration: none;
-    color: #383838;
+    color: #E8E8E8;
     font-size: 18px;
     width: 100%;
     height: 100%;
@@ -77,6 +83,7 @@
 
 .nav-text a:hover {
     background-color: #FFDA77;
+    color: #383838;
 }
 
 .nav-menu-items {
@@ -107,4 +114,22 @@
 
 .spanMain {
     margin-left: 35px;
+}
+
+.logoutSidebar {
+    text-decoration: none;
+    color: #383838;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 0.4rem;
+    margin-left: 1170px;
+}
+
+.logoutSidebar:hover {
+    background-color: #383838;
+    color: #FFDA77;
 }

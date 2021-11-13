@@ -39,11 +39,11 @@ export default function Register() {
                 </div>  
                 <div className="regRight">
                     <form className="regBox" onSubmit={handleSubmit} >
-                        <input placeholder="Username" required className="regInput" 
+                        <input placeholder="Username" required className="regInput rounded" 
                             onChange={(e) => setUsername(e.target.value)} />
-                        <input placeholder="Email" required className="regInput" type="email" 
+                        <input placeholder="Email" required className="regInput rounded" type="email" 
                             onChange={(e) => setEmail(e.target.value)} />
-                        <input placeholder="Password" required className="regInput" type="password" minLength="6" 
+                        <input placeholder="Password" required className="regInput rounded" type="password" minLength="6" 
                             onChange={(e) => setPassword(e.target.value)} />
                         <button className="regButton" type="submit">Sign Up</button>
                         <button className="loginRegisterButton">

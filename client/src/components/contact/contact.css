@@ -1,8 +1,9 @@
 .contact {
+    padding-top: 70px;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: #E8E8E8;
+    background-color: #383838;
     display: flex;
     height: calc(100vh - 70px);
     width: 100vw;
@@ -18,95 +19,95 @@
 }
 
 .h3Contact {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-right: 1200px;
     letter-spacing: 2px;
 }
 
 .copyrightText {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 15px;
     font-weight: 400;
-    margin-top: 680px;
+    margin-top: 610px;
     margin-right: 1200px;
     letter-spacing: 2px;
 }
 
 .enjoy {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 15px;
     font-weight: 400;
-    margin-top: 680px;
-    margin-left: 1200px;
+    margin-top: 610px;
+    margin-left: 1180px;
     letter-spacing: 2px;
 }
 
 .adb {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-right: 1290px;
 }
 
 .copyright {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 680px;
+    margin-top: 610px;
     margin-right: 1348px;
 }
 
 .mailOutline {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-left: 1100px;
 }
 
 .facebook {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-left: 1160px;
 }
 
 .instagram {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-left: 1220px;
 }
 
 .twitter {
-    color: #394867;
+    color: #707070;
     display: flex;
     position: absolute;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 630px;
+    margin-top: 560px;
     margin-left: 1280px;
 }
 
@@ -241,3 +242,4 @@
     border-color: #383838;
     box-shadow: 0.8vmin -0.8vmin 0 #FFDA77;
 }
+

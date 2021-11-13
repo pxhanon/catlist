@@ -77,20 +77,20 @@ export default function Day({ day, rowIdx }) {
 
     function getCurrentDayClass() {
         return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")
-          ? "bg-yellow-main rounded-full w-7"
+          ? "bg-yellow-main rounded-full w-7 text-black-main"
           : "";
     }
     
 
     return (
-        <div className="bg-white pt-2 border-4 border-gray-main flex flex-col">
+        <div className="bg-black-main pt-2 border-4 border-gray-main flex flex-col">
             <header className="flex flex-col items-center">
             {rowIdx === 0 && (
-                <p className="text-sm mt-1">
+                <p className="text-sm font-medium text-yellow-main mt-1">
                 {day.format("ddd").toUpperCase()}
                 </p>
             )}
-                <p className={`text-sm p-1 my-1 text-center ${getCurrentDayClass()} `}>{day.format("DD")}</p>
+                <p className={`text-sm text-gray-main p-1 my-1 text-center ${getCurrentDayClass()} `}>{day.format("DD")}</p>
             </header>
             <div
                 className="flex-1 cursor-pointer"

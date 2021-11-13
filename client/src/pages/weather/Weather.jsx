@@ -28,13 +28,14 @@ export default function Weather() {
     return (
         <div className="weather">
             <div className="inputFormWeather">
-                <form class="max-w-sm bg-gray-100 px-5 py-8 rounded shadow-md mt-20 my-10 m-auto" onSubmit={locationSubmit}>
-                    <h2 class="text-center -mt-3 text-2xl font-medium text-black mb-5">
+                <form class="max-w-sm bg-black-main px-5 py-8 rounded shadow-md mt-32 my-10 m-auto" onSubmit={locationSubmit}>
+                    <h2 class="text-center -mt-3 text-2xl font-medium text-yellow-main mb-5">
                         Current Weather
                     </h2>
-                    <label className="font-normal text-lg" for="cityInput">City Name: </label>
+                    <label className="font-normal text-gray-main text-base" for="cityInput">City Name: </label>
                     <input placeholder="Type your City Name" className="ml-4 appearance-none border-none rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cityInput" type="text" name="cityName" ref={locationRef}/>
-                    <button class="ml-4 bg-yellow-main text-black py-2 px-3 rounded focus:outline-none focus:shadow-outline" type="submit">Go</button>
+                    <button class="ml-4 bg-yellow-main text-black-main font-medium hover:bg-yellow-sub hover:text-black-main  py-2 px-3 rounded focus:outline-none focus:shadow-outline" type="submit">Go</button>
+                    <a href="https://www.jangwat.com/knowledge/112/" target="_blank" className="text-gray-400 font-medium hover:text-gray-500 text-sm ml-12">* you can check city name in Thailand at this</a>
                     {error ? 
                         <p class="text-center ml-5 text-sm font-medium text-red-500 mt-4">
                             Please check your City Name again !

@@ -23,6 +23,7 @@ export default function Calendar() {
             <div className="calendar">
                 <div className="h-screen flex flex-col">
                     <CalendarHeader />
+                    <p className="ml-72 text-gray-400 font-medium">plan your day in seconds with Catlist's calendar</p>
                     <div className="flex flex-1">
                         <Month month={currenMonth} />
                     </div>

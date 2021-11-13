@@ -26,13 +26,16 @@ function App() {
   const { user } = useContext(Context);
 
   return (
+    <div className="app">
     <Router>
       <Switch>
         <Route exact path="/">
           {user ? <><Sidebar /><Home /></> :
             <>
               <Topbar />
-              <Intro />
+              <div className="sections">
+                <Intro />
+              </div>
             </>
           }
         </Route>
@@ -40,7 +43,9 @@ function App() {
           {user ? <><Sidebar /><Home /></> :
             <>
               <Topbar />
-              <Intro />
+              <div className="sections">
+                <Intro />
+              </div>
             </>
           }
         </Route>
@@ -111,6 +116,8 @@ function App() {
         </Route> */}
       </Switch>
     </Router>
+    </div>
+    
   );
 }
 

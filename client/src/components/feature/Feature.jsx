@@ -1,7 +1,7 @@
 import "./feature.css";
 
 import FeatureList from "../featureList/FeatureList";
-import {quickNote, planner, toDoList, weather, horoscope} from "../../data";
+import {quickNote, calendar, weather, horoscope} from "../../data";
 
 import { useEffect, useState } from "react";
 
@@ -17,19 +17,15 @@ export default function Feature() {
         },
         {
             id: "2",
-            title: "02 | Planner",
+            title: "02 | Weather",
         },
         {
             id: "3",
-            title: "03 | To Do List",
+            title: "03 | Calendar",
         },
         {
             id: "4",
-            title: "04 | Weather",
-        },
-        {
-            id: "5",
-            title: "05 | Horoscope",
+            title: "04 | Horoscope",
         },
     ]
 
@@ -40,15 +36,12 @@ export default function Feature() {
                 setImage(quickNote);
                 break;
             case "2":
-                setImage(planner);
-                break;
-            case "3":
-                setImage(toDoList);
-                break;
-            case "4":
                 setImage(weather);
                 break;
-            case "5":
+            case "3":
+                setImage(calendar);
+                break;
+            case "4":
                 setImage(horoscope);
                 break;
             default:
@@ -59,7 +52,6 @@ export default function Feature() {
 
     return (
         <div className="feature" id="feature">
-            <h1 className="h1Feature">FEATURE</h1>
             <div className="leftFeature">
                 <ul className="ulFeature">
                     {list.map(item => (

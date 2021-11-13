@@ -3,7 +3,6 @@ import "./howto.css";
 export default function Howto() {
     return (
         <div className="howto" id="howto" >
-            <h1 className="h1Howto">HOW TO</h1>
             <div className="containerHowto">
                 <div className="itemHowto">
                     <img className="imgHowto" src="assets/demo3.png" alt="" />

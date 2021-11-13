@@ -1,31 +1,30 @@
 import "./topbar.css";
-import { Adb } from '@mui/icons-material';
 
 import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
-      <div className="top">
-      <div className="topLeft">
-          <img class="w-6 mr-3" src="assets/icon/cat.png" alt="" />
-          <Link className="link" to="/intro">
-            <span className="brand">catlist</span>
-          </Link>
+      <div className="topbar">
+      <div className="topbarLeft">
+            <a href="#header">
+              <img class="w-8 mr-5" src="assets/icon/cat.png" alt="" />
+            </a>
+            <a href="#header" className="barbrand">catlist</a>
       </div>
-      <div className="topCenter">
-        <ul className="topList">
-          <a href="#header" className="topListItem">home</a>
-          <a href="#feature" className="topListItem">feature</a>
-          <a href="#howto" className="topListItem">manual</a>
+      <div className="topbarCenter">
+        <ul className="topbarList">
+          <a href="#header" className="topbarListItem hover:text-yellow-main">home</a>
+          <a href="#feature" className="topbarListItem hover:text-yellow-main">feature</a>
+          <a href="#contact" className="topbarListItem hover:text-yellow-main">about</a>
         </ul>
         </div>
-      <div className="topRight">
-        <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/login">Log In</Link>
+      <div className="topbarRight">
+        <ul className="topbarList">
+          <li className="topbarListItem2">
+            <Link className="barlink" to="/login">Log In</Link>
           </li>
-          <li className="topListItem">
-            <Link className="link" to="/register">Sign Up</Link>
+          <li className="topbarListItem2">
+            <Link className="barlink bg-yellow-main text-black-main font-medium py-2 px-3 rounded focus:outline-none focus:shadow-outline" to="/register">Sign Up</Link>
           </li>
         </ul>
       </div>
