@@ -35,26 +35,31 @@ export default function Day({ day, rowIdx }) {
         setSelectedEvent,
     } = useContext(GlobalContext);
 
-    // const isAuth = () => {
+    const isAuth = () => {
 
-    //     if (localStorage.getItem('user')) {
-    //         return JSON.parse(localStorage.getItem('user'));
-    //     } else {
-    //         return false;
-    //     }
-    // }
-    // const username = isAuth() ? isAuth().username : '999'
+        if (localStorage.getItem('user')) {
+            return JSON.parse(localStorage.getItem('user'));
+        } else {
+            return false;
+        }
+    }
+    const username = isAuth() ? isAuth().username : '999'
 
     const { user } =  useContext(Context);
 
-
+    // const fetchEvents = async() => {
+    //     const res = await axios.get("/events/?user"+username);
+    
+    // }
+    // fetchEvents(); 
 
     useEffect(() => {
         // const fetchEvents = async() => {
-        //     const res = axios.get("/event/?user"+username);
+        //     const res = await axios.get("/events/?user"+username);
         //     setDayEvents(res);
         // }
         // fetchEvents(); 
+
         const events = filteredEvents.filter( (evt) =>
             dayjs(evt.day).format("DD-MM-YY") === day.format("DD-MM-YY")
         );

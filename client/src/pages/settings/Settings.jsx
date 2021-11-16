@@ -6,9 +6,7 @@ import axios from "axios";
 export default function Settings() {
 
     const [file, setFile] = useState(null);
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+
     const [success, setSuccess] = useState(false);
 
     const { user, dispatch } = useContext(Context);
@@ -19,9 +17,6 @@ export default function Settings() {
         dispatch({ type: "UPDATE_START" });
         const updatedUser = {
           userId: user._id,
-          username,
-          email,
-          password,
         };
         if (file) {
           const data = new FormData();
@@ -70,17 +65,17 @@ export default function Settings() {
                             </div>
                         </div>
                         <label class="block text-lg text-gray-main font-medium">Username</label>
-                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="text" placeholder={user.username} onChange={(e) => setUsername(e.target.value)} name="name" />
+                        <p class="w-full border bg-gray-main border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" >{user.username}</p>
                         <label class="block text-lg text-gray-main font-medium">Email</label>
-                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="email" placeholder={user.email} onChange={(e) => setEmail(e.target.value)} name="email" />
+                        <p class="w-full border bg-gray-main border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" >{user.email}</p>
                         <label class="block text-lg text-gray-main font-medium">Password</label>
-                        <input class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" type="password" onChange={(e) => setPassword(e.target.value)} name="password" />
+                        <p class="w-full border bg-gray-main border-gray-300 py-2 pl-3 rounded mt-2 mb-5 outline-none focus:ring-indigo-600 :ring-indigo-600" >******</p>
                         <button class="cursor-pointer mb-5 py-2 px-4 block mt-6 bg-yellow-main text-black-main hover:bg-yellow-sub font-medium w-full text-center rounded" type="submit">
-                            Update
+                            Profile Picture Update
                         </button>
                         {success && (
                             <span class="text-center ml-40 text-sm font-medium text-green-500">
-                            Profile has been updated...
+                            Profile Picture has been updated...
                             </span>
                         )}
                     </form>

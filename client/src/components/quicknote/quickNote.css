@@ -70,6 +70,10 @@ form.create-note textarea {
     color: white;
 }
 
+textarea {
+    outline-color: red;
+  }
+
 form.create-note input::placeholder {
     color: #C5C5C5;
 }
@@ -101,3 +105,4 @@ form.create-note button:hover {
 .editQuickNote {
     margin-left: 80px;
 }
+

@@ -41,6 +41,7 @@ export default function EventModal() {
             return false;
         }
     }
+
     const username = isAuth() ? isAuth().username : '999'
 
     useEffect(() => {

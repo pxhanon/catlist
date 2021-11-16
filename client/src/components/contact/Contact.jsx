@@ -57,7 +57,7 @@ export default function Contact() {
                     <div class="w-full md:w-5/5 text-left p-6 md:p-4 space-y-2">
                         <p class="text-xl tracking-wider text-black-main font-bold">Hello, Catlister</p>
                         <p class="text-base tracking-wider text-gray-500 font-medium">from organizer</p>
-                        <p class="text-base tracking-wide leading-relaxed text-black-main font-medium">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p class="text-base tracking-wide leading-relaxed text-black-main font-medium">สร้าง To Do-List เพื่อกำหนดเวลาสำหรับแผนงานได้อย่างมืออาชีพ เหมาะอย่างยิ่งสำหรับผู้ใช้งานที่ต้องการกำหนดและติดตามภาระหน้าที่หรือสิ่งที่ตนเองต้องจัดการ และยังสร้างเป็นแบบแผนสิ่งที่ต้องทำได้แบบวันต่อวัน โฟกัสกับงานได้อย่างเป็นระบบและมีประสิทธิภาพ ช่วยประหยัดเวลาและเพิ่มคุณภาพชีวิตให้แก่คุณ</p>
                     </div>
                 </div>
             </div>
@@ -65,10 +65,10 @@ export default function Contact() {
             <h3 className="h3Contact">catlist</h3>
             <Copyright className="copyright" />
             <p class="copyrightText">copyright {currentYear}</p>
-            <MailOutline className="mailOutline"/>
+            {/* <MailOutline className="mailOutline"/>
             <Facebook className="facebook"/>
             <Instagram className="instagram"/>
-            <Twitter className="twitter"/>
+            <Twitter className="twitter"/> */}
             <p class="enjoy">Enjoy with your {currentDay} !</p>
         </div>
     )
